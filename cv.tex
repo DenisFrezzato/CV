@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor}
 \usepackage{geometry}
@@ -9,10 +9,10 @@
 \usepackage{tabularx}
 \usepackage[hidelinks,unicode]{hyperref}
 
-\geometry{a4paper, left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm}
+\geometry{a4paper, left=18mm, top=18mm, right=18mm, bottom=18mm}
 
-\definecolor{text}{HTML}{333333}
-\definecolor{text-light}{HTML}{999999}
+\definecolor{text}{cmyk}{0,0,0,1}
+\definecolor{text-light}{cmyk}{0,0,0,0.6}
 
 \setmainfont[
     Path=fonts/,
@@ -30,14 +30,14 @@
 \newcolumntype{L}[1]{>{\raggedleft\let\\\\\arraybackslash\hspace{0pt}}p{#1}}
 \newcolumntype{R}[1]{>{\raggedright\let\\\\\arraybackslash\hspace{0pt}}p{#1}}
 
-\newcommand{\cvtitle}[1]{{\vspace{1em}\fontsize{36pt}{1em}\opensansextrabold #1}}
-\newcommand{\jobdescription}[1]{{\fontsize{22pt}{1em}\color{text-light}\textit{\textbf{#1}}}}
+\newcommand{\cvtitle}[1]{{\vspace{16pt}\fontsize{26pt}{1em}\opensansextrabold #1}}
+\newcommand{\jobdescription}[1]{{\vspace{16pt}\fontsize{16pt}{1em}\textit{\textbf{#1}}}}
 \newcommand{\tag}[1]{{\color{text-light}\textit{\textbf{#1}}}}
-\newcommand{\sectiontitle}[1]{\fontsize{20pt}{1em}\textbf{#1}}
+\newcommand{\sectiontitle}[1]{\fontsize{16pt}{1em}\textbf{#1}}
 
 \newcommand{\row}[2]{%
-    \vspace{1em}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{.24\textwidth} R{.74\textwidth}}
+    \vspace{16pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{.20\textwidth} R{.77\textwidth}}
         #1 & #2
     \end{tabular*}%
 }
@@ -49,39 +49,42 @@
 \begin{document}
     \setlength{\parindent}{0ex}
     \pagenumbering{gobble}
-    \setstretch{1.4}
+    \setstretch{1.6}
 
     \row{}{%
         \cvtitle{Denis Frezzato}\newline
-        \jobdescription{full stack JavaScript developer}\newline
+        \jobdescription{sviluppatore JavaScript full stack}\newline
+        \tag{residenza} Ponte nelle Alpi, fraz. Piaia 64/D (BL)\newline
+        \tag{domicilio} Milano, via Trasimeno 22/1 (MI)\newline
         \tag{\mdPhone} \href{tel:00393477220550}{3477220550}\newline
         \tag{\mdMail} \href{mailto:frezzato.denis@gmail.com}{frezzato.denis@gmail.com}\newline
         \tag{\faGithub} \href{https://github.com/DenisFrezzato}{DenisFrezzato}%
     }
 
+    \vspace{1em}
     \row{}{\sectiontitle{Esperienze lavorative}}
 
     \row{\tag{da luglio 2017}}{%
         \textbf{Sviluppatore JavaScript} presso Trovami\newline
-        Sviluppo social directory con React. Sviluppo di applicazione web con architettura a microservizi basata su Node.js, MongoDB, Elasticsearch, RabbitMQ, Redis. Sviluppo API RESTful basate su Node.js e PostgreSQL. Sviluppo applicazioni con React e React Native. Interventi su siti sviluppati con Drupal e WordPress. Sviluppatore full stack presso I-Glue.%
+        Sviluppo social directory con React. Sviluppo di applicazione web con architettura a microservizi basata su Node.js, MongoDB, Elasticsearch, RabbitMQ, Redis. Sviluppo API RESTful basate su Node.js e PostgreSQL. Sviluppo applicazioni\break con React e React Native. Interventi su siti sviluppati con Drupal e WordPress.%
     }
 
-    \row{\tag{da dicembre 2015\newline a luglio 2017}}{%
+    \row{\tag{da dicembre 2015\break a luglio 2017}}{%
         \textbf{Sviluppatore full stack} presso I-Glue\newline
         Sviluppo siti con i CMS Drupal e WordPress (sviluppo temi ad hoc e moduli personalizzati). Sviluppo applicazioni ibride con Cordova, Ionic e Angular. Sviluppo API RESTful basate su Node.js, MongoDB e MySQL. Sviluppo applicazione web con Zend Framework 2. Sviluppo di SPA con React. Sviluppo di applicazione web con architettura a microservizi basata su Node.js, MongoDB, Elasticsearch, RabbitMQ, Redis.%
     }
 
-    \row{\tag{da febbraio 2015\newline a dicembre 2015}}{%
+    \row{\tag{da febbraio 2015\break a dicembre 2015}}{%
         \textbf{Sviluppatore full stack} freelance\newline
         Sviluppo siti web con i CMS Drupal e WordPress (sviluppo temi ad hoc e moduli personalizzati). Sviluppo applicazione web con Zend Framework 2.%
     }
 
-    \row{\tag{da giugno 2014\newline a febbraio 2015}}{%
+    \row{\tag{da giugno 2014\break a febbraio 2015}}{%
         \textbf{Sviluppatore front end} presso Alchimedia\newline
         Lavorazione di siti web di produzione industriale.%
     }
 
-    \row{\tag{da ottobre 2013\newline a giugno 2014}}{%
+    \row{\tag{da ottobre 2013\break a giugno 2014}}{%
         \textbf{Graphic design, web design e sviluppatore web} presso visualmade\newline
         Progettazione grafica di stampati e siti web. Sviluppo di siti web statici.%
     }
@@ -90,13 +93,14 @@
     \row{}{\sectiontitle{Formazione}}
 
     \row{\tag{luglio 2013}}{%
-        Laurea in Design della Comunicazione presso il Politecnico di Milano, votazione 97/110.%
+        \textbf{Laurea in Design della Comunicazione} presso il Politecnico di Milano, votazione 97/110.%
     }
 
     \row{\tag{luglio 2008}}{%
-        Diploma di Perito Industriale Capotecnico - Specializzazione: Informatica - presso I.T.I.S. G. Segato di Belluno.%
+        \textbf{Diploma di Perito Industriale Capotecnico - Specializzazione: Informatica} - presso I.T.I.S. G. Segato di Belluno.%
     }
 
+    \vspace{1em}
     \row{}{\sectiontitle{Conoscenze informatiche}}
 
     \row{}{%
@@ -106,12 +110,12 @@
 
     \row{}{%
         \textbf{Linguaggi}\newline
-        Ottima conoscenza di HTML5, CSS3 e SASS, JavaScript (ES5, ES6, ES7, Node.js) e PHP. Discreta conoscenza di TypeScript.%
+        Ottima conoscenza di HTML5, CSS3 e SASS, JavaScript (ES5, ES6, ES7, Node.js)\newline e PHP. Discreta conoscenza di TypeScript.%
     }
 
     \row{}{%
         \textbf{Librerie, framework, CMS}\newline
-        Ottima conoscenza di React, React Native, Express, SenecaJS, hapi e Zend Framework 2. Ottima conoscenza di Drupal e WordPress. Buona conoscenza di AngularJS e Ionic.%
+        Ottima conoscenza di React, React Native, Express, SenecaJS, hapi e Zend Framework 2. Ottima conoscenza di Drupal e WordPress. Buona conoscenza\newline di AngularJS e Ionic.%
     }
 
     \row{}{%
@@ -124,6 +128,7 @@
         Ottima conoscenza di Git e Docker.%
     }
 
+    \vspace{1em}
     \row{}{\sectiontitle{Hobby e interessi personali}}
 
     \row{}{%
