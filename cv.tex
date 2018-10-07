@@ -1,0 +1,137 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage[hidelinks,unicode]{hyperref}
+
+\geometry{a4paper, left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm}
+
+\definecolor{text}{HTML}{333333}
+\definecolor{text-light}{HTML}{999999}
+
+\setmainfont[
+    Path=fonts/,
+    Extension=.ttf,
+    BoldFont=OpenSans-Bold,
+    BoldItalicFont=OpenSans-BoldItalic,
+]{OpenSans-Regular}
+\newfontfamily\opensansextrabold[Path=fonts/]{OpenSans-ExtraBold.ttf}
+\newfontfamily{\NF}[Path=fonts/]{NerdFont.ttf}
+
+\def\faGithub{\NF\symbol{"F09B}}
+\def\mdMail{\NF\symbol{"F84B}}
+\def\mdPhone{\NF\symbol{"F61C}}
+
+\newcolumntype{L}[1]{>{\raggedleft\let\\\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedright\let\\\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\newcommand{\cvtitle}[1]{{\vspace{1em}\fontsize{36pt}{1em}\opensansextrabold #1}}
+\newcommand{\jobdescription}[1]{{\fontsize{22pt}{1em}\color{text-light}\textit{\textbf{#1}}}}
+\newcommand{\tag}[1]{{\color{text-light}\textit{\textbf{#1}}}}
+\newcommand{\sectiontitle}[1]{\fontsize{20pt}{1em}\textbf{#1}}
+
+\newcommand{\row}[2]{%
+    \vspace{1em}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{.24\textwidth} R{.74\textwidth}}
+        #1 & #2
+    \end{tabular*}%
+}
+
+\title{Curriculum vitae}
+\date{2018-10-07}
+\author{Denis Frezzato}
+
+\begin{document}
+    \setlength{\parindent}{0ex}
+    \pagenumbering{gobble}
+    \setstretch{1.4}
+
+    \row{}{%
+        \cvtitle{Denis Frezzato}\newline
+        \jobdescription{full stack JavaScript developer}\newline
+        \tag{\mdPhone} \href{tel:00393477220550}{3477220550}\newline
+        \tag{\mdMail} \href{mailto:frezzato.denis@gmail.com}{frezzato.denis@gmail.com}\newline
+        \tag{\faGithub} \href{https://github.com/DenisFrezzato}{DenisFrezzato}%
+    }
+
+    \row{}{\sectiontitle{Esperienze lavorative}}
+
+    \row{\tag{da luglio 2017}}{%
+        \textbf{Sviluppatore JavaScript} presso Trovami\newline
+        Sviluppo social directory con React. Sviluppo di applicazione web con architettura a microservizi basata su Node.js, MongoDB, Elasticsearch, RabbitMQ, Redis. Sviluppo API RESTful basate su Node.js e PostgreSQL. Sviluppo applicazioni con React e React Native. Interventi su siti sviluppati con Drupal e WordPress. Sviluppatore full stack presso I-Glue.%
+    }
+
+    \row{\tag{da dicembre 2015\newline a luglio 2017}}{%
+        \textbf{Sviluppatore full stack} presso I-Glue\newline
+        Sviluppo siti con i CMS Drupal e WordPress (sviluppo temi ad hoc e moduli personalizzati). Sviluppo applicazioni ibride con Cordova, Ionic e Angular. Sviluppo API RESTful basate su Node.js, MongoDB e MySQL. Sviluppo applicazione web con Zend Framework 2. Sviluppo di SPA con React. Sviluppo di applicazione web con architettura a microservizi basata su Node.js, MongoDB, Elasticsearch, RabbitMQ, Redis.%
+    }
+
+    \row{\tag{da febbraio 2015\newline a dicembre 2015}}{%
+        \textbf{Sviluppatore full stack} freelance\newline
+        Sviluppo siti web con i CMS Drupal e WordPress (sviluppo temi ad hoc e moduli personalizzati). Sviluppo applicazione web con Zend Framework 2.%
+    }
+
+    \row{\tag{da giugno 2014\newline a febbraio 2015}}{%
+        \textbf{Sviluppatore front end} presso Alchimedia\newline
+        Lavorazione di siti web di produzione industriale.%
+    }
+
+    \row{\tag{da ottobre 2013\newline a giugno 2014}}{%
+        \textbf{Graphic design, web design e sviluppatore web} presso visualmade\newline
+        Progettazione grafica di stampati e siti web. Sviluppo di siti web statici.%
+    }
+
+    \newpage
+    \row{}{\sectiontitle{Formazione}}
+
+    \row{\tag{luglio 2013}}{%
+        Laurea in Design della Comunicazione presso il Politecnico di Milano, votazione 97/110.%
+    }
+
+    \row{\tag{luglio 2008}}{%
+        Diploma di Perito Industriale Capotecnico - Specializzazione: Informatica - presso I.T.I.S. G. Segato di Belluno.%
+    }
+
+    \row{}{\sectiontitle{Conoscenze informatiche}}
+
+    \row{}{%
+        \textbf{Sistemi operativi}\newline
+        Linux, Windows, Mac OSX%
+    }
+
+    \row{}{%
+        \textbf{Linguaggi}\newline
+        Ottima conoscenza di HTML5, CSS3 e SASS, JavaScript (ES5, ES6, ES7, Node.js) e PHP. Discreta conoscenza di TypeScript.%
+    }
+
+    \row{}{%
+        \textbf{Librerie, framework, CMS}\newline
+        Ottima conoscenza di React, React Native, Express, SenecaJS, hapi e Zend Framework 2. Ottima conoscenza di Drupal e WordPress. Buona conoscenza di AngularJS e Ionic.%
+    }
+
+    \row{}{%
+        \textbf{Database}\newline
+        Discreta conoscenza di PostgreSQL, MySQL, MongoDB ed Elasticsearch. Buona conoscenza di Redis.%
+    }
+
+    \row{}{%
+        \textbf{Strumenti}\newline
+        Ottima conoscenza di Git e Docker.%
+    }
+
+    \row{}{\sectiontitle{Hobby e interessi personali}}
+
+    \row{}{%
+        Tecnologie, musica, lettura, fotografia, design.\newline
+        Frequente partecipazione a MeetUp su argomenti tecnologici a Milano.%
+    }
+
+    \row{}{%
+        Autorizzo al trattamento dei miei dati personali ai sensi del DL 196/03.%
+    }
+\end{document}
