@@ -30,13 +30,14 @@
 \newcolumntype{L}[1]{>{\raggedleft\let\\\\\arraybackslash\hspace{0pt}}p{#1}}
 \newcolumntype{R}[1]{>{\raggedright\let\\\\\arraybackslash\hspace{0pt}}p{#1}}
 
-\newcommand{\cvtitle}[1]{{\vspace{16pt}\fontsize{26pt}{1em}\opensansextrabold #1}}
-\newcommand{\jobdescription}[1]{{\vspace{16pt}\fontsize{16pt}{1em}\textit{\textbf{#1}}}}
+\newcommand{\vmargin}{\vspace{14pt}}
+\newcommand{\cvtitle}[1]{{\vspace{14pt}\fontsize{26pt}{1em}\opensansextrabold #1}}
+\newcommand{\jobdescription}[1]{{\vspace{14pt}\fontsize{16pt}{1em}\textit{\textbf{#1}}}}
 \newcommand{\tag}[1]{{\color{text-light}\textit{\textbf{#1}}}}
-\newcommand{\sectiontitle}[1]{\fontsize{16pt}{1em}\textbf{#1}}
+\newcommand{\sectiontitle}[1]{\fontsize{14pt}{1em}\textbf{#1}}
 
 \newcommand{\row}[2]{%
-    \vspace{16pt}
+    \vmargin
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{.20\textwidth} R{.77\textwidth}}
         #1 & #2
     \end{tabular*}%
@@ -49,7 +50,7 @@
 \begin{document}
     \setlength{\parindent}{0ex}
     \pagenumbering{gobble}
-    \setstretch{1.6}
+    \setstretch{1.4}
 
     \input{content/\lang}
 \end{document}
