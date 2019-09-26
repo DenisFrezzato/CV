@@ -1,4 +1,3 @@
 rm -f *.pdf
 
-xelatex -jobname="it" "\def\lang{it} \input{cv.tex}"
-xelatex -jobname="en" "\def\lang{en} \input{cv.tex}"
+xelatex cv.tex
