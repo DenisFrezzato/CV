@@ -1,3 +1,3 @@
 rm -f *.pdf
 
-xelatex cv.tex
+xelatex resume.tex
