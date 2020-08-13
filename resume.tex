@@ -12,11 +12,13 @@
 \geometry{a4paper, left=18mm, top=18mm, right=18mm, bottom=18mm}
 
 \definecolor{text}{cmyk}{0,0,0,1}
+\definecolor{text-pale}{cmyk}{0,0,0,0.8}
 \definecolor{text-light}{cmyk}{0,0,0,0.6}
 
 \setmainfont[
     Path=fonts/,
     Extension=.ttf,
+    ItalicFont=OpenSans-Italic,
     BoldFont=OpenSans-Bold,
     BoldItalicFont=OpenSans-BoldItalic,
 ]{OpenSans-Regular}
@@ -32,8 +34,8 @@
 \newcolumntype{R}[1]{>{\raggedright\let\\\\\arraybackslash\hspace{0pt}}p{#1}}
 
 \newcommand{\vmargin}{\vspace{14pt}}
-\newcommand{\cvtitle}[1]{{\vspace{14pt}\fontsize{26pt}{1em}\opensansextrabold #1}}
-\newcommand{\jobdescription}[1]{{\vspace{14pt}\fontsize{16pt}{1em}\textit{\textbf{#1}}}}
+\newcommand{\cvtitle}[1]{{\vspace{4pt}\fontsize{26pt}{1em}\opensansextrabold #1}}
+\newcommand{\jobdescription}[1]{{\vspace{14pt}\color{text-pale}\fontsize{16pt}{1em}\textit{#1}}}
 \newcommand{\tag}[1]{{\color{text-light}\textit{\textbf{#1}}}}
 \newcommand{\sectiontitle}[1]{\fontsize{14pt}{1em}\textbf{#1}}
 
@@ -45,7 +47,7 @@
 }
 
 \title{Curriculum vitae}
-\date{2019-09-26}
+\date{2020-08-13}
 \author{Denis Frezzato}
 
 \begin{document}
